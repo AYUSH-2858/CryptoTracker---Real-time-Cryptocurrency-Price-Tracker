@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply antialiased;
+}
+
+@keyframes priceUp {
+  0% {
+    background-color: rgba(16, 185, 129, 0);
+  }
+  50% {
+    background-color: rgba(16, 185, 129, 0.2);
+  }
+  100% {
+    background-color: rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes priceDown {
+  0% {
+    background-color: rgba(239, 68, 68, 0);
+  }
+  50% {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    background-color: rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-price-up {
+  animation: priceUp 1.5s ease;
+}
+
+.animate-price-down {
+  animation: priceDown 1.5s ease;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hide-on-tablet {
+    display: none;
+  }
+}
